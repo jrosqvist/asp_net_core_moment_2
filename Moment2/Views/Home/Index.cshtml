@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Startsidan";
+}
+<h1>Startsidan</h1>
+
+<p>Antal filmer tillagda --> @ViewData["MovieCount"]</p>
+
+<!-- Läser in senast tillagda film från en partial-->
+<partial name="_LatestAddedMoviePartial" />
+

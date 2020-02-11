@@ -1,0 +1,242 @@
+﻿
+/* Hela sidan */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color: #333745;
+    font-size: 62.5%;
+    line-height: 150%;
+}
+/* Text */
+p, span, label, input, select, option, li {
+    font-size: 1.6rem;
+}
+
+a {
+    font-size: 1.6rem;
+    color: #D11149;
+    letter-spacing: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+.fat {
+    font-weight: bold;
+}
+
+select {
+    height:30px;
+    width:100px;
+}
+
+/* Sidinnehåll */
+body {
+    background-color: white;
+}
+
+.content {
+    background-color: white;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* Header */
+.main-header {
+    background-color: white;
+    min-height: 50px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.10);
+}
+
+#logo {
+    padding-left: 20px;
+    line-height: 50px;
+    letter-spacing: 0.5px;
+    font-family: 'Gochi Hand', cursive;
+    font-weight:bolder;
+    font-size: 2.4rem;
+    float: left;
+    color: #1A8FE3;
+}
+
+/* Huvudmenyn */
+.main-menu {
+    float: right;
+}
+
+    .main-menu ul li {
+        list-style-type: none;
+        float:left;
+    }
+.active {
+    background-color: #EAF7FF;
+}
+
+        .main-menu ul li a {
+            text-decoration: none;
+            color: #333745;
+            line-height: 55px;
+            margin:0 20px;
+            font-size:1.4rem;
+        }
+
+            .main-menu ul li a:hover {
+                color: #1A8FE3;
+            }
+
+#mobile-menu-button {
+    display: none;
+}
+/* Tar bort float */
+.main-header:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+
+/* Sektion för sidinnehållet */
+.main-section {
+    width: 60%;
+    margin: 2.5%;
+    padding: 2.5% 17.5%;
+    background-color: white;
+    min-height: 400px;
+}
+
+    .main-section p {
+        margin-bottom: 10px;
+    }
+
+/* Tar bort float*/
+.content:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+
+/* Film-boxar*/
+.movie-box {
+    border-bottom: 1px solid #1A8FE3;
+    padding: 2.5%;
+    margin: 1% 0;
+}
+
+/* Sidfoten */
+footer {
+    width: 100%;
+    background-color: #EAF7FF;
+    text-align: center;
+    min-height: 75px;
+}
+
+    footer p {
+        line-height: 75px;
+        font-size: 1.4rem;
+    }
+
+    footer a {
+        color: #D11149;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            font-size: 1.7rem;
+        }
+
+
+
+/* Mobilmenyn */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    background-color: white;
+}
+
+    .sidenav a {
+        color: #333745;
+        text-align: center;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 1.6rem;
+        display: block;
+        transition: 0.3s;
+    }
+
+        .sidenav a:hover {
+            color: #1A8FE3;
+        }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 3rem;
+        margin-left: 50px;
+        color: #D11149;
+    }
+
+        .sidenav .closebtn:hover {
+            font-size: 3.2rem;
+        }
+
+
+/* Media-queries*/
+@media (max-width:900px) {
+    /* Döljer vanliga menyn */
+    .main-menu {
+        display: none;
+    }
+    /* Visar mobilmenyknappen */
+    #mobile-menu-button {
+        display: block;
+        float: right;
+        margin-top: 17.5px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+        #mobile-menu-button span {
+            display: block;
+            height: 3px;
+            width: 20px;
+            margin: 0;
+            margin-bottom: 2px;
+            background-color: #333745;
+        }
+
+    .main-section {
+        width: 80%;
+        margin: 2.5%;
+        padding: 2.5% 7.5%;
+    }
+}

@@ -1,0 +1,70 @@
+﻿@model Moment2.Models.Movie
+
+@{
+    ViewData["Title"] = "Lägg till filmer";
+}
+
+<h2>Lägg till filmer</h2>
+
+<form method="Post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Title"></label>
+        <br>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <div>
+        <label asp-for="Genre"></label>
+        <br>
+        <select asp-for="Genre">
+            <option value="Action">Action</option>
+            <option value="Drama">Drama</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Komedi">Komedi</option>
+            <option value="Romantik">Romantik</option>
+            <option value="Övrigt">Övrigt</option>
+        </select>
+        <span asp-validation-for="Genre"></span>
+    </div>
+    <div>
+        <label asp-for="ReleaseYear"></label>
+        <br>
+        <input asp-for="ReleaseYear" />
+        <span asp-validation-for="ReleaseYear"></span>
+    </div>
+    <div>
+        <label asp-for="PlayTime"></label>
+        <br>
+        <input asp-for="PlayTime" />
+        <span asp-validation-for="PlayTime"></span>
+    </div>
+    <div>
+        <label asp-for="Ratings"></label><br />
+        <input asp-for="Ratings" type="radio" value=1 />
+        <label for="1">1</label>
+        <input asp-for="Ratings" type="radio" value=2 />
+        <label for="2">2</label>
+        <input asp-for="Ratings" type="radio" value=3  />
+        <label for="3">3</label>
+        <input asp-for="Ratings" type="radio" value=4 />
+        <label for="4">4</label>
+        <input asp-for="Ratings" type="radio" value=5 />
+        <label for="5">5</label>
+        <span asp-validation-for="Ratings"></span>
+    </div>
+    <div>
+        <br>
+        <input type="submit" value="Lägg till film" id="add-movie-button" name="add-movie-button" />
+    </div>
+</form>
+
+
+<!-- Listar filmerna -->
+<div class="form-result">
+    @if (ViewBag.MovieTitle != null && ViewBag.MovieTitle != "")
+    {
+        <p class="success">Filmen @ViewBag.MovieTitle tillagd!</p>
+    }
+
+</div>

@@ -1,0 +1,58 @@
+﻿@{
+    // Används för att kolla efter aktiv sida
+    string controllerAction = ViewContext.RouteData.Values["Controller"].ToString() + ViewContext.RouteData.Values["Action"].ToString();
+}
+
+<!DOCTYPE html>
+
+<html lang="sv-se">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    <div id="mobile-menu-container" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMobileMenu()">&times;</a>
+        <a asp-controller="Home" asp-action="Index">Hem</a>
+        <a asp-controller="Home" asp-action="Movies">Filmer</a>
+        <a asp-controller="Home" asp-action="AddMovie">Lägg till film</a>
+        <a asp-controller="Home" asp-action="About">Om sidan</a>
+    </div>
+    <div id="container">
+        <header class="main-header">
+            <a asp-controller="Home" asp-action="Index"><div id="logo-div"><h1 id="logo">Moment 2</h1></div></a>
+            <nav class="main-menu">
+                <ul>
+                    <li class="@(controllerAction == "HomeIndex" ? "active" : "" )"> <a asp-controller="Home" asp-action="Index">Hem</a></li>
+                    <li class="@(controllerAction == "HomeMovies" ? "active" : "" )"> <a asp-controller="Home" asp-action="Movies">Filmer</a></li>
+                    <li class="@(controllerAction == "HomeAddMovie" ? "active" : "" )"> <a asp-controller="Home" asp-action="AddMovie">Lägg till film</a></li>
+                    <li class="@(controllerAction == "HomeAbout" ? "active" : "" )"><a asp-controller="Home" asp-action="About">Om sidan</a></li>
+                </ul>
+            </nav>
+            <div id="mobile-menu-button" onclick="openMobileMenu()">
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+            </div>
+
+        </header>
+        <div class="content">
+
+            <div class="main-section">
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>
+                Av: Joakim Rosqvist -
+                Kontakta mig via e-post -->
+                <a href="mailto:joro1803@student.miun.se"> Här</a>
+            </p>
+        </footer>
+    </div>
+    <script src="~/js/main.js"></script>
+</body>
+</html>

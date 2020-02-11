@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Moment2.Models.Movie>
+@{
+    ViewData["Title"] = "Filmer";
+}
+
+<!-- Läser in senast tillagda film från en partial-->
+<partial name="_LatestAddedMoviePartial" />
+
+
+<h2>Tillagda filmer</h2>
+
+@if (Model.Count() == 0)
+{
+    <p>Inga filmer är tillagda ännu</p>
+}
+else
+{
+    foreach (var movie in Model)
+    {
+        <div class="movie-box">
+           <h4>@movie.Title</h4>
+           <p>Genre: @movie.Genre</p>
+           <p>Utgivningsår: @movie.ReleaseYear</p>
+           <p>Speltid: @movie.PlayTime minuter</p>
+           <p>Betyg: @movie.Ratings</p>
+        </div>
+    }
+}
+
+
+
+
