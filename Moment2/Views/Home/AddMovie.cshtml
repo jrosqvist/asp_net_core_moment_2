@@ -8,15 +8,15 @@
 
 <form method="Post">
     <div asp-validation-summary="ModelOnly"></div>
-    <div>
+    <div class="form-group">
         <label asp-for="Title"></label>
-        <br>
+        <br />
         <input asp-for="Title" />
         <span asp-validation-for="Title"></span>
     </div>
-    <div>
+    <div class="form-group">
         <label asp-for="Genre"></label>
-        <br>
+        <br />
         <select asp-for="Genre">
             <option value="Action">Action</option>
             <option value="Drama">Drama</option>
@@ -27,31 +27,34 @@
         </select>
         <span asp-validation-for="Genre"></span>
     </div>
-    <div>
+    <div class="form-group">
         <label asp-for="ReleaseYear"></label>
-        <br>
+        <br />
         <input asp-for="ReleaseYear" />
         <span asp-validation-for="ReleaseYear"></span>
     </div>
-    <div>
+    <div class="form-group">
         <label asp-for="PlayTime"></label>
-        <br>
+        <br />
         <input asp-for="PlayTime" />
         <span asp-validation-for="PlayTime"></span>
     </div>
-    <div>
-        <label asp-for="Ratings"></label><br />
-        <input asp-for="Ratings" type="radio" value=1 />
-        <label for="1">1</label>
-        <input asp-for="Ratings" type="radio" value=2 />
-        <label for="2">2</label>
-        <input asp-for="Ratings" type="radio" value=3  />
-        <label for="3">3</label>
-        <input asp-for="Ratings" type="radio" value=4 />
-        <label for="4">4</label>
-        <input asp-for="Ratings" type="radio" value=5 />
-        <label for="5">5</label>
-        <span asp-validation-for="Ratings"></span>
+    <div class="form-group">   
+        <div id="radio-div">
+            <label>Betyg</label><br />
+            <input asp-for="Ratings" type="radio" value=1 id="1" />
+            <label for="1">1</label>
+            <input asp-for="Ratings" type="radio" value=2 id="2" />
+            <label for="2">2</label>
+            <input asp-for="Ratings" type="radio" value=3 id="3" />
+            <label for="3">3</label>
+            <input asp-for="Ratings" type="radio" value=4 id="4" />
+            <label for="4">4</label>
+            <input asp-for="Ratings" type="radio" value=5 id="5" />
+            <label for="5">5</label>
+            <br />
+            <span asp-validation-for="Ratings"></span>
+        </div>
     </div>
     <div>
         <br>

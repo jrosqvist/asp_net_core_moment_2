@@ -1,34 +1,66 @@
 [
   {
-    "Id": "0c2ce9969e094ee29015a915bcbb8d84",
+    "Id": "efac4e60ba14456a972d3e6b85029089",
     "Title": "Heat",
     "Genre": "Action",
-    "PlayTime": 102,
-    "ReleaseYear": 1994,
+    "PlayTime": 94,
+    "ReleaseYear": 1996,
     "Ratings": 4
   },
   {
-    "Id": "eaa8aacb2c3f458c84920d8609fb1f17",
+    "Id": "e185cc821fc24cde9f4ea06179edd209",
     "Title": "Titanic",
-    "Genre": "Action",
-    "PlayTime": 124,
-    "ReleaseYear": 1998,
-    "Ratings": 0
+    "Genre": "Drama",
+    "PlayTime": 104,
+    "ReleaseYear": 1995,
+    "Ratings": 4
   },
   {
-    "Id": "a3fbed58c7fc43e5a1d1e617e7b1627e",
-    "Title": "test",
-    "Genre": "Action",
-    "PlayTime": 122,
-    "ReleaseYear": 2002,
+    "Id": "c28d8fdbdb00493985ddfa28fc0b545a",
+    "Title": "Korvfesten",
+    "Genre": "Romantik",
+    "PlayTime": 112,
+    "ReleaseYear": 2007,
     "Ratings": 2
   },
   {
-    "Id": "22842b2baf1849d1b495b31b7239fb0c",
-    "Title": "Bounce",
+    "Id": "d0a3990d9dc04888b3e7e40529b4c419",
+    "Title": "Hobbit",
     "Genre": "Komedi",
-    "PlayTime": 94,
-    "ReleaseYear": 2007,
+    "PlayTime": 79,
+    "ReleaseYear": 2009,
+    "Ratings": 1
+  },
+  {
+    "Id": "eebd4581cdf24cfbb876602d0440de88",
+    "Title": "ET",
+    "Genre": "Thriller",
+    "PlayTime": 98,
+    "ReleaseYear": 2000,
     "Ratings": 5
+  },
+  {
+    "Id": "46ef46d5af2343d9b21ba2b3c591d69b",
+    "Title": "Bröderna Lejonhjärta",
+    "Genre": "Drama",
+    "PlayTime": 82,
+    "ReleaseYear": 1972,
+    "Ratings": 5
+  },
+  {
+    "Id": "35ca75dc0c584835981914330ee8d098",
+    "Title": "Bounce",
+    "Genre": "Action",
+    "PlayTime": 88,
+    "ReleaseYear": 2019,
+    "Ratings": 2
+  },
+  {
+    "Id": "7e55b8b353e24bfbacda11711bcd7da4",
+    "Title": "Apocalypse Now",
+    "Genre": "Action",
+    "PlayTime": 99,
+    "ReleaseYear": 1997,
+    "Ratings": 3
   }
 ]

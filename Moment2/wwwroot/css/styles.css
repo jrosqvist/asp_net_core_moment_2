@@ -7,6 +7,7 @@
     color: #333745;
     font-size: 62.5%;
     line-height: 150%;
+    font-family: 'Roboto', sans-serif;
 }
 /* Text */
 p, span, label, input, select, option, li {
@@ -15,13 +16,15 @@ p, span, label, input, select, option, li {
 
 a {
     font-size: 1.6rem;
-    color: #D11149;
+    color: #1A8FE3;
     letter-spacing: 1px;
+    text-decoration:none;
 }
 
 h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1px;
     margin-bottom: 5px;
+    font-family: 'Cabin', sans-serif;
 }
 
 h1 {
@@ -42,11 +45,6 @@ h4 {
 
 .fat {
     font-weight: bold;
-}
-
-select {
-    height:30px;
-    width:100px;
 }
 
 /* Sidinnehåll */
@@ -93,13 +91,14 @@ body {
     background-color: #EAF7FF;
 }
 
-        .main-menu ul li a {
-            text-decoration: none;
-            color: #333745;
-            line-height: 55px;
-            margin:0 20px;
-            font-size:1.4rem;
-        }
+.main-menu ul li a {
+    text-decoration: none;
+    color: #333745;
+    line-height: 55px;
+    margin: 0 20px;
+    font-size: 1.4rem;
+    font-family: 'Cabin', sans-serif;
+}
 
             .main-menu ul li a:hover {
                 color: #1A8FE3;
@@ -124,6 +123,9 @@ body {
     background-color: white;
     min-height: 400px;
 }
+.main-section h2 {
+    margin-bottom:25px;
+}
 
     .main-section p {
         margin-bottom: 10px;
@@ -136,12 +138,56 @@ body {
     content: "";
 }
 
+/* Antal filmer */
+.movie-count {
+    font-size:1.8rem;
+    font-weight:bold;
+}
+/* Formuläret */
+.form-group {
+    margin-bottom: 20px;
+}
+input[type="text"], input[type="number"] {
+    height: 30px;
+    width: 200px;
+}
+select {
+    height: 30px;
+    width: 200px;
+}
+
+#radio-div input {
+    margin-left: 5px;
+}
+
+#radio-div label {
+    margin-left: 2px;
+}
+#add-movie-button {
+    background-color: #1A8FE3;
+    border:none;
+    padding:5px 10px;
+    color:white;
+    border-radius:5px;
+}
 
 /* Film-boxar*/
 .movie-box {
     border-bottom: 1px solid #1A8FE3;
     padding: 2.5%;
     margin: 1% 0;
+}
+
+/* Tillagd-film */
+.added-p {
+    color: #0CCE6B;
+    font-style:italic;
+}
+.success {
+    color: #0CCE6B;
+    font-weight:bold;
+    margin-top:20px;
+    font-size:1.8rem;
 }
 
 /* Sidfoten */

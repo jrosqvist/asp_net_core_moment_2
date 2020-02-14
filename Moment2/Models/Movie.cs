@@ -26,20 +26,20 @@ namespace Moment2.Models
 
         [Display(Name = "Speltid (minuter)")]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
-        [RegularExpression(@"([0-9]+)", ErrorMessage = "Enbart siffror, tack.")]
+        [RegularExpression("([0-9]+)", ErrorMessage = "Bara siffror tack!")]
         [Range(1, 600, ErrorMessage = "Här godkänns bara filmer som är mellan 1 och 600 minuter!")]
-        public int PlayTime { get; set; }
+        public int? PlayTime { get; set; }
 
         [Display(Name = "Utgivningsår")]
         [Required(ErrorMessage = "Obligatoriskt fält!")]
-        [RegularExpression(@"([0-9]+)", ErrorMessage = "Enbart siffror, tack.")]
-        [Range(1900, 2100, ErrorMessage ="Måste vara mellan 1895 och 2100")]
-        public int ReleaseYear { get; set; }
+        [RegularExpression("([0-9]+)", ErrorMessage = "Bara siffror tack!")]
+        [Range(1895, 2100, ErrorMessage ="Måste vara mellan 1895 och 2100")]
+        public int? ReleaseYear { get; set; }
 
 
         [Display(Name = "Betyg")]
         [Required]
-        [Range(1, 5, ErrorMessage = "Välj ett alternativ!")]
+        [Range(1, 5, ErrorMessage = "Välj ett alternativ (1 - 5)!")]
         public int Ratings { get; set; }
 
         // Metod som genererar ett unikt id

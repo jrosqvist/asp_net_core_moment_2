@@ -1,10 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Startsidan";
 }
-<h1>Startsidan</h1>
+<h2>Startsidan</h2>
 
-<p>Antal filmer tillagda --> @ViewData["MovieCount"]</p>
+<p class="movie-count">Antal filmer tillagda --> <a asp-controller="Home" asp-action="Movies"> @ViewData["MovieCount"]</a></p>
 
 <!-- Läser in senast tillagda film från en partial-->
 <partial name="_LatestAddedMoviePartial" />
+
+<p>
+    It was popularised in the 1960s with the release of Letraset sheets containing
+    Lorem Ipsum passages, and more recently with desktop publishing software like
+    Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+
 
